@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Para ti , mi amor 💖</title>
+  <meta name="description" content="Un pequeño detalle hecho con amor" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fff5f7;         /* rosa muy suave */
+      --primary:#ff4d6d;    /* rosa intenso */
+      --primary-2:#ff8fa3;  /* rosa medio */
+      --ink:#402b3a;        /* marrón ciruela */
+      --card:#ffffff;       /* blanco puro */
+      --shadow:0 10px 30px rgba(255,77,109,.15);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; color:var(--ink);
+      background: radial-gradient(1200px 800px at 10% -10%, #ffe3ea 0%, transparent 60%),
+                  radial-gradient(1200px 800px at 90% 110%, #ffe3ea 0%, transparent 60%),
+                  var(--bg);
+      overflow-x:hidden;
+    }
+    .container{max-width:1000px; margin:0 auto; padding:24px}
+
+    /* Header */
+    header{position:relative; padding:80px 24px 60px; text-align:center}
+    .title{font-family:"Great Vibes", cursive; font-size: clamp(40px, 7vw, 88px); line-height:1; color:var(--primary); text-shadow:0 6px 24px rgba(255,77,109,.25)}
+    .subtitle{font-weight:600; letter-spacing:.3px; font-size:clamp(16px, 2.8vw, 22px)}
+
+    /* Floating hearts background */
+    .hearts{position:absolute; inset:0; overflow:hidden; pointer-events:none;}
+    .heart{position:absolute; width:20px; height:20px; background:var(--primary); transform:rotate(45deg); opacity:.18; filter:blur(.3px);
+      animation: floatUp linear infinite; border-radius:2px}
+    .heart:before,.heart:after{content:""; position:absolute; width:20px; height:20px; background:inherit; border-radius:50%}
+    .heart:before{left:-10px}
+    .heart:after{top:-10px}
+    @keyframes floatUp{
+      from{transform:translateY(0) rotate(45deg); opacity:.2}
+      to{transform:translateY(-120vh) rotate(45deg); opacity:0}
+    }
+
+    /* Card */
+    .card{background:var(--card); box-shadow:var(--shadow); border-radius:22px; padding:28px; margin:24px auto; width:min(92%, 900px)}
+
+    /* Typewriter */
+    .typewriter{font-size:clamp(18px, 3.2vw, 24px); line-height:1.7}
+    .typewriter .cursor{display:inline-block; width:2px; height:1em; background:var(--primary); margin-left:4px; animation:blink 1s infinite}
+    @keyframes blink{50%{opacity:0}}
+
+    /* Gallery */
+    .gallery{
+      display:grid; gap:14px; grid-template-columns:repeat(2,1fr);
+    }
+    @media (min-width:640px){.gallery{grid-template-columns:repeat(3,1fr)}}
+    @media (min-width:920px){.gallery{grid-template-columns:repeat(4,1fr)}}
+    .photo{position:relative; border-radius:18px; overflow:hidden; aspect-ratio:1/1; background:#fbe1e7}
+    .photo img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease}
+    .photo:hover img{transform:scale(1.04)}
+
+    /* CTA button */
+    .btn{display:inline-block; border:none; background:linear-gradient(135deg, var(--primary), var(--primary-2)); color:white; padding:14px 22px; font-weight:700; border-radius:14px; box-shadow:var(--shadow); cursor:pointer; transition: transform .15s ease, box-shadow .2s ease}
+    .btn:active{transform:translateY(1px); box-shadow:0 6px 18px rgba(255,77,109,.2)}
+
+    /* Surprise section */
+    .hidden{display:none}
+    .surprise{font-size:clamp(18px, 3.2vw, 24px); line-height:1.8}
+
+    /* Footer */
+    footer{padding:32px 16px 48px; text-align:center; opacity:.8}
+    footer a{color:var(--primary); text-decoration:none; font-weight:600}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hearts" aria-hidden="true"></div>
+    <h1 class="title">Te amo Diana, mi niña hermosa</h1>
+    <p class="subtitle">Un detalle hecho con todo mi corazón</p>
+  </header>
+
+  <section class="card container">
+    <h2 style="margin:0 0 10px 0">Para ti 💌</h2>
+    <p class="typewriter" id="typewriter" aria-live="polite"></p>
+  </section>
+
+  <section class="card container">
+    <h2 style="margin:0 0 10px 0">Fotos Del Amor De Mi Vida 📸</h2>
+    <p style="margin-top:0; opacity:.8">Diana aunque no me creas te amo como a nadie, te amo millon de veces...eres el amor de mi vida mi niña hermosa, grcs por haber llegado a mi vida y perdoname por todo cariño <code></code> </p>
+    <div class="gallery">
+      <!-- Reemplaza src por tus imágenes -->
+      <figure class="photo"><img src="img/foto1.jpg" alt="Foto 1"></figure>
+      <figure class="photo"><img src="img/foto2.jpg" alt="Foto 2"></figure>
+      <figure class="photo"><img src="img/foto3.jpg" alt="Foto 3"></figure>
+      <figure class="photo"><img src="img/foto4.jpg" alt="Foto 4"></figure>
+      <figure class="photo"><img src="img/foto5.jpg" alt="Foto 5"></figure>
+      <figure class="photo"><img src="img/foto6.jpg" alt="Foto 6"></figure>
+      <figure class="photo"><img src="img/foto7.jpg" alt="Foto 7"></figure>
+      <figure class="photo"><img src="img/foto8.jpg" alt="Foto 8"></figure>
+    </div>
+  </section>
+
+  <section class="card container" id="sorpresa-card">
+    <h2 style="margin:0 0 10px 0">Un mensaje más… ✨❤️💕</h2>
+    <p style="margin-top:0; opacity:.8">Toca el botón para verlo</p>
+    <button class="btn" id="revealBtn" aria-controls="surprise" aria-expanded="false">Toca para ver</button>
+    <div id="surprise" class="hidden" style="margin-top:18px">
+      <p class="surprise">Gracias por existir. Contigo, los días son más bonitos, las risas más sinceras y los sueños más grandes. Prometo seguir construyendo momentos a tu lado, uno por uno, con paciencia, respeto y mucho amor. 💞</p>
+    </div>
+  </section>
+
+  <footer>
+    <small>Hecho con amor...JHAEL el chico que te ama demasiado ❤️😍 • <a href="#" id="shareLink">Compartir</a></small>
+  </footer>
+
+  <script>
+    // Floating hearts generator
+    (function makeHearts(){
+      const container=document.querySelector('.hearts');
+      const rand=(min,max)=>Math.random()*(max-min)+min;
+      for(let i=0;i<24;i++) addHeart();
+      function addHeart(){
+        const h=document.createElement('div');
+        h.className='heart';
+        h.style.left=rand(0,100)+'%';
+        h.style.bottom='-30px';
+        const size=rand(10,26); h.style.width=size+'px'; h.style.height=size+'px';
+        const dur=rand(8,16); h.style.animationDuration=dur+'s';
+        h.style.opacity=rand(.08,.22);
+        container.appendChild(h);
+        setTimeout(()=>{ h.remove(); addHeart(); }, dur*1000);
+      }
+    })();
+
+    // Typewriter effect
+    const text = `Te escribo estas palabras para recordarte lo especial que eres para mí.\n\nEres mi paz, mi alegría y mi mejor coincidencia. Gracias por cada momento, por cada abrazo y por enseñarme a amar bonito.\n\nTe amo, mi niña hermosa, hoy y siempre.`;
+    const target = document.getElementById('typewriter');
+    const speed = 24; // ms por caracter
+    let i=0;
+    function type(){
+      if(i<text.length){
+        const ch=text.charAt(i);
+        target.innerHTML = target.innerHTML.replace('<span class="cursor"></span>','') + (ch==='\\n' ? '<br>' : ch) + '<span class="cursor"></span>';
+        i++; setTimeout(type, speed);
+      } else {
+        target.innerHTML = target.innerHTML.replace('<span class="cursor"></span>','') + '<span class="cursor"></span>';
+      }
+    }
+    target.innerHTML='<span class="cursor"></span>';
+    window.addEventListener('load', type);
+
+    // Reveal surprise
+    const btn=document.getElementById('revealBtn');
+    const surprise=document.getElementById('surprise');
+    btn.addEventListener('click',()=>{
+      const visible = !surprise.classList.contains('hidden');
+      surprise.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', String(!visible));
+      if(!visible){
+        surprise.animate(
+          [{opacity:0, transform:'translateY(6px)'}, {opacity:1, transform:'translateY(0)'}],
+          {duration:380, easing:'cubic-bezier(.2,.7,.2,1)'}
+        );
+      }
+    });
+
+    // Share link helper (copia la URL actual)
+    document.getElementById('shareLink').addEventListener('click', (e)=>{
+      e.preventDefault();
+      const url = location.href;
+      if(navigator.clipboard){
+        navigator.clipboard.writeText(url).then(()=>{
+          alert('Enlace copiado. ¡Listo para enviar!');
+        });
+      } else {
+        prompt('Copia este enlace:', url);
+      }
+    });
+  </script>
+</body>
+</html>
